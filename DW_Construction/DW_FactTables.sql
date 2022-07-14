@@ -1,0 +1,4 @@
+CREATE TABLE Fact_Run_Event(
+ID int NOT NULL IDENTITY (1,1) PRIMARY KEY,
+
+)
