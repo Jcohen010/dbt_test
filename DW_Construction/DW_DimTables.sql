@@ -15,3 +15,9 @@ EmployeeName VARCHAR(100) NOT NULL,
 EmployeeEmail VARCHAR(50),
 EmployeeTitle VARCHAR(50) 
 )
+
+CREATE TABLE Dim_Job(
+JobNum VARCHAR(10) PRIMARY KEY,
+JobCreDate Date,
+-- unfinished
+)
