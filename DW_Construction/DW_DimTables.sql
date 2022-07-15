@@ -6,7 +6,7 @@ CustomerDesc varchar(50),
 CREATE TABLE Dim_Machine(
 MachineID varchar(25) PRIMARY KEY,
 MachineDesc varchar(50),
-DepartmentName varchar(25)
+DepartmentID varchar(25) FOREIGN KEY REFERENCES Dim.Department.DepartmentID
 )
 
 CREATE TABLE Dim_Employee(
@@ -16,8 +16,20 @@ EmployeeEmail VARCHAR(50),
 EmployeeTitle VARCHAR(50) 
 )
 
-CREATE TABLE Dim_Job(
-JobNum VARCHAR(10) PRIMARY KEY,
-JobCreDate Date,
--- unfinished
+
+CREATE TABLE Dim_Shift(
+ShiftID VARCHAR(25) PRIMARY KEY NOT NULL,
+ShiftName VARCHAR(50)
 )
+
+CREATE TABLE Dim_Defect(
+DefectID VARCHAR(25) PRIMARY KEY NOT NULL,
+DefectDesc VARCHAR(50),
+DepartmentID VARCHAR(50) FOREIGN KEY REFERENCES Dim.Department.DepartmentID
+)
+
+CREATE TABLE Dim_Department(
+DepartmentID VARCHAR(50) PRIMARY KEY NOT NULL,
+DepartmentDesc VARCHAR(50)
+)
+
