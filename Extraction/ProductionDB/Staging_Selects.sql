@@ -38,14 +38,14 @@ FROM SLInvHead
 -- Staging JobItemFinishedGoods
 SELECT kJobCode, kStckCode, kStckQuantity, RecLockedDate, StckMoveValue
 FROM StckMovesVal
-WHERE kcoNum = "1" AND kJobCode <> "" AND StckMoveType = "REC-FIN" AND RecLockedDate > @LowerBound 
+WHERE kcoNum = "1" AND kJobCode <> NULL AND StckMoveType = "REC-FIN" AND RecLockedDate > @LowerBound 
 
 -- Staging component
 SELECT kAccCode, kCompNum, EstICmpName
 FROM EstIComponent
-WHERE kcoNum = "1" AND EstICmpName <> "" AND kJobCode <> "" AND RecLockedDate > @LowerBound
+WHERE kcoNum = "1" AND EstICmpName <> NULL AND kJobCode <> NULL AND RecLockedDate > @LowerBound
 
 -- Staging ProductionOrderQty
 SELECT kAccCode, kCompNo, EstICompYieldQty
 FROM EstICompQty
-WHERE kcoNum = "1" AND kJobCode <> "" AND RecLockedDate > @LowerBound
+WHERE kcoNum = "1" AND kJobCode <> NULL AND RecLockedDate > @LowerBound
