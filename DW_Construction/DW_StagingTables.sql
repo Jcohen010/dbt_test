@@ -41,7 +41,29 @@ CustomerID VARCHAR(25)
 CREATE TABLE dbo.Stage_FinGoods(
 JobID VARCHAR(10),
 ItemID VARCHAR(15),
-FinishedGoods INT
+CustomerID VARCHAR(30),
+FinishedGoods INT,
+FGCreDate Date
 )
 
--- staging production order qty
+-- staging component (Binds JobID and ItemID through "unique component of job") Used to supply production order qty staging table with CPC)
+CREATE TABLE dbo.Stage_Component(
+JobID VARCHAR(10),
+ComponentID VARCHAR(10),
+ItemID VARCHAR(25)
+)
+
+-- staging production order qty (Provides OrderQty for all Items of a Job)
+CREATE TABLE dbo.Stage_ProductionOrderQty(
+JobID VARCHAR(10),
+ComponentID VARCHAR(10),
+ProdOrderQty Int
+)
+
+
+-- staging invoice
+CREATE TABLE dbo.Staging_Invoice(
+InvoiceID VARCHAR(25),
+CustomerID VARCHAR(20),
+InvoiceCreDate Date
+)
