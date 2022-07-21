@@ -36,10 +36,9 @@ FROM SLInvHead
 
 
 -- Staging JobItemFinishedGoods
-SELECT kJobCode, kStckCode, kStcQuantity, RecLockedDate, StckMoveValue
+SELECT kJobCode, kStckCode, kStckQuantity, RecLockedDate, StckMoveValue
 FROM StckMovesVal
-WHERE kcoNum = "1" AND kJobCode <> "" AND StckMoveType = "REC-FIN" AND RecLockedDate > @LowerBound
-GROUP BY kStckCode
+WHERE kcoNum = "1" AND kJobCode <> "" AND StckMoveType = "REC-FIN" AND RecLockedDate > @LowerBound 
 
 -- Staging component
 SELECT kAccCode, kCompNum, EstICmpName
