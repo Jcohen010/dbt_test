@@ -1,0 +1,17 @@
+{
+	"name": "CreateFacts",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE Fact_Run_Event(\nRunEventDate DATE, \nRunEventTime TIME, \nRunEventShift VARCHAR(10), \nJobID VARCHAR(20), \nItemID VARCHAR(10),\nJobItemID VARCHAR(15),\nCustomerID Varchar(30), \nMachineID VARCHAR(30), \nEmployeeID VARCHAR(30), \nQuantity int, \nRunEventHours int,\nDowntimeType VARCHAR(30), \nRunEventValue int\n);\n\nCREATE TABLE Fact_JobItem_Details(\nJobItemID VARCHAR(10),\nJobID VARCHAR(10),\nItemID Varchar(20),\nCustomerID VARCHAR(25),\nProdOrdQty Int,\nFinGoodQty Int,\nDefectiveQty Int, \nQtyUp Int\n);\n\nCREATE TABLE Fact_Defect_Event(\nJobID VARCHAR(25),\nItemID VARCHAR(25),\nJobItemID VARCHAR(25),\nDateFound DATE,\nInspectShift VARCHAR(25), \nInspectGluer VARCHAR(25), \nDefectCode VARCHAR(25),\nDefectDesc VARCHAR(25),\nCaseQty Int, \nDefectiveSamples Int,\nTotalSamples Int, \nOriginMachineID VARCHAR(25), \nQuantity INT\n);\n\nCREATE TABLE Fact_NonConformingMaterial(\nNCRkey VARCHAR(25),\nJobID VARCHAR(25),\nCustomerID VARCHAR(25),\nDateID DATE,\nReportedBy VARCHAR(25),\nLocationofFinding VARCHAR(25),\nOriginMachineID VARCHAR(25),\nSuspectedQty INT,\nUnitType VARCHAR(25),\nDefectID VARCHAR(25),\nDisposition VARCHAR(25)\n);",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "CurtisDW",
+				"poolName": "CurtisDW"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
