@@ -1,0 +1,17 @@
+{
+	"name": "TestPipelineSuccess",
+	"properties": {
+		"content": {
+			"query": "SELECT *\nFROM dbo.Fact_Defect_Event;",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "CurtisDW",
+				"poolName": "CurtisDW"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
