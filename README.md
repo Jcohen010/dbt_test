@@ -2,7 +2,7 @@
 This repository will hold all SQL, test data files, python scripts, and more for creating and populating the CurtisDW and its supporting ELT pipelines.
 
 
-![Warehouse Image](https://media.istockphoto.com/photos/abstract-data-background-picture-id1254825733?k=20&m=1254825733&s=612x612&w=0&h=jadt49XVdinM7Gp1f0DAhN0ICJQeBs37hLb8PSnWCm8=)\
+![Warehouse Image](https://media.istockphoto.com/photos/abstract-data-background-picture-id1254825733?k=20&m=1254825733&s=612x612&w=0&h=jadt49XVdinM7Gp1f0DAhN0ICJQeBs37hLb8PSnWCm8=)
 
  
 ## Problem Statement
@@ -42,7 +42,6 @@ This phase will involve connecting all the dots. Pipelines will be initiated to 
 * Microsoft M
 * Javascript (maybe for building data capture apps)
 
+## Data warehouse Dimensional Schema
 
-
-
-
+[Dimensional Schema](https://drive.google.com/file/d/1IE41yC-f8mZOjA6qqJ1kBX-z_R-xs2wK/view?usp=sharing)
