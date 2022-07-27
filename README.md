@@ -28,19 +28,31 @@ This phase of the project is integral to it's success, hence the large time peri
 
 This phase will involve connecting all the dots. Pipelines will be initiated to run at scheduled intervals, query performance will be monitored and optimized if necessary, and errors will be debugged as they come. The bulk of this phase will be fine tuning all of the players within the workflow to be as efficient as possible.
 
+---
+## Resources
+I'm not just doing this stuff with a pen and paper!
 
-## Technologies Involved
-* Microsoft Azure 
+### Platforms
+* Microsoft Azure
+* Docker
+
+### Tools
 * Airflow
 * PostgreSQL
 * Power BI
+* LucidChart
+* Jira
+* Github (duh)
+* Visual Studio Code
 
-## Languages Involved
+### Languages
 * Python
 * SQL/T-SQL
 * Microsoft DAX
 * Microsoft M
 * Javascript (maybe for building data capture apps)
+
+---
 
 ## Data Warehouse Dimensional Schema
 
