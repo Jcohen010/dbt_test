@@ -1,0 +1,17 @@
+{
+	"name": "CreateDims",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE Dim_Customer(\nCustomerID varchar(50),\nCustomerDesc varchar(50)\n);\n\nCREATE TABLE Dim_Machine(\nMachineID varchar(25) ,\nMachineDesc varchar(50),\nDepartmentID varchar(25)\n);\n\nCREATE TABLE Dim_Employee(\nEmployeeID VARCHAR(25) ,\nEmployeeName VARCHAR(100) NOT NULL,\nEmployeeEmail VARCHAR(50),\nEmployeeTitle VARCHAR(50) \n);\n\nCREATE TABLE Dim_Shift(\nShiftID VARCHAR(25),\nShiftName VARCHAR(50)\n);\n\nCREATE TABLE Dim_Defect(\nDefectID VARCHAR(25),\nDefectDesc VARCHAR(50),\nDepartmentID VARCHAR(50)\n);\n\nCREATE TABLE Dim_Department(\nDepartmentID VARCHAR(50),\nDepartmentDesc VARCHAR(50)\n);",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "CurtisDW",
+				"poolName": "CurtisDW"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
