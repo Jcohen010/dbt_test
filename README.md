@@ -57,3 +57,5 @@ I'm not just doing this stuff with a pen and paper!
 ## Data Warehouse Dimensional Schema
 
 [Dimensional Schema](https://drive.google.com/file/d/1IE41yC-f8mZOjA6qqJ1kBX-z_R-xs2wK/view?usp=sharing)
+
+I opted to use a galaxy schema for this project.
