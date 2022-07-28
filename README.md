@@ -12,7 +12,7 @@ After creating a more clearcut analytical data model out of the existing Excel D
 
 Storing analytical data in this way is no longer sustainable. To state the obvous Excel was not created to serve as a small scale data warehouse, even though it can for a period of time. This screen here. which can last tens of minutes, is a weekly reminder it is time to transition to a more scalable solution:
 
-![Loading image](Loading.PNG "Loading Message")
+![Loading image](./Doc_Images/Loading.PNG "Loading Message")
 
 
 ## The Solution
@@ -63,7 +63,7 @@ I'm not just doing this stuff with a pen and paper!
 
 ## Data Warehouse Dimensional Schema
 
-![Dimensional Schema](dimschema.png "Dimensional Schema Diagram")
+![Dimensional Schema](./Doc_Images/dimschema.png "Dimensional Schema Diagram")
 
 I opted for a galaxy schema for this project. Present are several fact tables representing various production events, surrounded by a constellation of dimensions, many of which supporting more than one fact table. 
 
