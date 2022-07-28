@@ -56,6 +56,11 @@ I'm not just doing this stuff with a pen and paper!
 
 ## Data Warehouse Dimensional Schema
 
-[Dimensional Schema](https://drive.google.com/file/d/1IE41yC-f8mZOjA6qqJ1kBX-z_R-xs2wK/view?usp=sharing)
+![Dimensional Schema](dimschema.png "Dimensional Schema Diagram")
 
-I opted to use a galaxy schema for this project.
+I opted for a galaxy schema for this project. Present are several fact tables representing various production events, surrounded by a constellation of dimensions, many of which supporting more than one fact table. 
+
+A few of the fact tables shown in the final dimensional structure are the product of complex transformations and joins imposed  upon staging tables which have been kept in their raw form from their source tables, so as to reduce query complexity and therefore strain on the operational DB. These transformations will either take place within a staging area of the warehouse itself, or in an external staging area, prior to load.
+
+*This schema design is dynamic; new versions will be uploaded when revisions occur.*
+
