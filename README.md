@@ -12,7 +12,7 @@ After creating a more clearcut analytical data model out of the existing Excel D
 
 Storing analytical data in this way is no longer sustainable. To state the obvous Excel was not created to serve as a small scale data warehouse, even though it can for a period of time. This screen here. which can last tens of minutes, is a weekly reminder it is time to transition to a more scalable solution:
 
-![Loading image](Loading.png "Loading Message")
+![Loading image](Loading.PNG "Loading Message")
 
 
 ## The Solution
