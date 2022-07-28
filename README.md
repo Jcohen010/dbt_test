@@ -9,7 +9,7 @@ This repository will hold all SQL, test data files, python scripts, and more for
 The medium-sized custom manufacturing company I work for was started in 1775. Obviously, creating a full stack data engineering infrastructural solution was not the number one thing on the founders minds. Upon arriving at the company, it struck me that even since then, a focused effort on developing a data management workflow was never really been made. Every single row of data outside of our production database is being stored and managed with Excel, along with some weakly managed manual data extractions and migration carried out weekly to feed a collection of excel charts in master documents for reporting. 
 
 ## The Solution
-My objective felt clear: to architect and implement a new front to back, best practice, and scalable data management and analytics solution for the company, or die trying! Jokes... but I would give it my all! This way it wouldn't be held back by poor data management practices, but instead be empowered to take advantage of new insights with the potential to drive improvement through making important decisions based upon the wealth of currently under-utilized data within the organization.
+My objective felt clear: to architect and implement a new front to back, best practice, and (most importantly) scalable data management and analytics solution for the company, or die trying! Jokes... but I give it the 'ole college try! This way it wouldn't be held back by poor data management practices, but instead be empowered to take advantage of new insights with the potential to drive improvement through making important decisions based upon the wealth of currently under-utilized data within the organization.
 
 ## Project Timeline
 
