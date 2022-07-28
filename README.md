@@ -9,7 +9,7 @@ This repository will hold all SQL, test data files, python scripts, and more for
 The medium-sized custom manufacturing company I work for was started in 1775. Obviously, creating a full stack data engineering infrastructural solution was not the number one thing on the founders minds. Upon arriving at the company, it struck me that even since then, a focused effort on developing a data management workflow was never really been made. Every single row of data outside of our production database is being stored and managed with Excel, along with some weakly managed manual data extractions and migration carried out weekly to feed a collection of excel charts in master documents for reporting. 
 
 ## The Solution
-My objective felt clear: to architect and implement a new front to back, best practice, and scalable data management and analytics solution for the company, or die trying! Jokes... but I would give it my all! This way it wouldn't be held back by poor data management practices, but instead be empowered to take advantage of new insights with the potential to drive improvement through making important decisions based upon the wealth of currently under-utilized data within the organization.
+My objective felt clear: to architect and implement a new front to back, best practice, and (most importantly) scalable data management and analytics solution for the company, or die trying! Jokes... but I give it the 'ole college try! This way it wouldn't be held back by poor data management practices, but instead be empowered to take advantage of new insights with the potential to drive improvement through making important decisions based upon the wealth of currently under-utilized data within the organization.
 
 ## Project Timeline
 
@@ -56,6 +56,11 @@ I'm not just doing this stuff with a pen and paper!
 
 ## Data Warehouse Dimensional Schema
 
-[Dimensional Schema](https://drive.google.com/file/d/1IE41yC-f8mZOjA6qqJ1kBX-z_R-xs2wK/view?usp=sharing)
+![Dimensional Schema](dimschema.png "Dimensional Schema Diagram")
 
-I opted to use a galaxy schema for this project.
+I opted for a galaxy schema for this project. Present are several fact tables representing various production events, surrounded by a constellation of dimensions, many of which supporting more than one fact table. 
+
+A few of the fact tables shown in the final dimensional structure are the product of complex transformations and joins imposed  upon staging tables which have been kept in their raw form from their source tables, so as to reduce query complexity and therefore strain on the operational DB. These transformations will either take place within a staging area of the warehouse itself, or in an external staging area, prior to load.
+
+*This schema design is dynamic; new versions will be uploaded when revisions occur.*
+
