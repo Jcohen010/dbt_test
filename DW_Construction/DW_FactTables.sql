@@ -29,7 +29,8 @@ QtyUp Int
 CREATE TABLE dbo.Fact_Defect_Event(
 JobID VARCHAR(25),
 ItemID VARCHAR(25),
-JobItemID VARCHAR(25),
+JobItemID VARCHAR(25), 
+CustomerID VARCHAR(50),
 DateFound DATE,
 InspectShift VARCHAR(25), 
 InspectGluer VARCHAR(25), 
