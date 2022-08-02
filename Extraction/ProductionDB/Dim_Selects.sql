@@ -18,3 +18,12 @@ SELECT kuser AS EmployeeID, SysUserDesc AS EmployeeName, SysUserEmail AS Employe
 FROM SysUser
 WHERE ReInactive = "no" AND SysUserEmpActive = "yes";
 
+-- Dim_Shift
+SELECT kShiftName 
+FROM PrdShiftDets
+
+
+-- Dim_Department
+SELECT kDeptCode, kDeptDesc
+FROM SysDepartment
+
