@@ -8,11 +8,11 @@ This repository will hold all SQL, test data files, python scripts, and more for
 ## Problem Statement
 The medium-sized custom manufacturing company I work for was started in 1775. Obviously, creating a full stack data engineering infrastructural solution was not the number one thing on the founders minds. Upon arriving at the company, it struck me that even since then, a focused effort on developing a data management workflow was never really been made. Every single row of data outside of our production database is being stored and managed with Excel, along with some weakly managed manual data extractions and migration carried out weekly to feed a collection of excel charts in master documents for reporting. 
 
-After creating a more clearcut analytical data model out of the existing Excel Datasets, I centralized these sets into a psuedo-data-warehouse. About a year later I am ashamed that Excel was the solution I chose at the time, as the limitations of Microsoft Excel are incredibly clear, but I have learned so much since then that I give my past, naive, self a bit of slack. 
+After creating a more clearcut analytical data model out of the existing Excel Datasets, I centralized these sets into a psuedo-data-warehouse. Looking back now, a year later, I am not proud of the Excel solution I came up with, as the limitations of Microsoft Excel are incredibly clear, but I have learned so much since then that I give my past, naive, self a bit of slack. 
 
-Storing analytical data in this way is no longer sustainable. To state the obvous Excel was not created to serve as a small scale data warehouse, even though it can for a period of time. This screen here. which can last tens of minutes, is a weekly reminder it is time to transition to a more scalable solution:
+Storing analytical data in this way is no longer sustainable. To state the obvous Excel was not created to serve as a small scale data warehouse, even though it can for a period of time. This screen here, which can last tens of minutes, is a weekly reminder it is time to transition to a more scalable solution:
 
-![Loading image](Loading.PNG "Loading Message")
+![Loading image](./Doc_Images/Loading.PNG "Loading Message")
 
 
 ## The Solution
@@ -63,7 +63,7 @@ I'm not just doing this stuff with a pen and paper!
 
 ## Data Warehouse Dimensional Schema
 
-![Dimensional Schema](dimschema.png "Dimensional Schema Diagram")
+![Dimensional Schema](./Doc_Images/dimschema.png "Dimensional Schema Diagram")
 
 I opted for a galaxy schema for this project. Present are several fact tables representing various production events, surrounded by a constellation of dimensions, many of which supporting more than one fact table. 
 
