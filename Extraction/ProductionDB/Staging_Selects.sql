@@ -7,23 +7,6 @@ SELECT CostTransCreDate AS RunEventDate, CostTransCreTime AS RunEventTime, kShif
 FROM CostTrans
 WHERE RunEventDate BETWEEN @UpperBound AND @LowerBound;
 
--- Staging Job_Details
-
--- WITH CustomerJob AS (
-SELECT kJobCode, kAccCode
-FROM EstICust
--- WHERE CLAUSE FOR QUICK INDEXING/ CORRECT DATE RANGE
--- ),
--- JobQuantity AS (
--- SELECT kJobCode, EstICompQtyOrdQty, kJobStatus
--- FROM CustICompQty
-
--- SELECT JobIHead.KJobCode AS JobNum, JobIHead.JobIHeadCreDate AS JobCreDate, JobIHead.kJobStatus AS JobStatus, Customer.kAccCode As Customer 
--- FROM JobIHead 
--- INNER JOIN Customer ON Customer.kJobCode = kJobCode
--- INNER JOIN JobQuantity ON JobQuantity.kJobCode = kJobCode/
--- WHERE kcoNum = "1" AND kJobCode <> NULL AND kJobStatus <> NULL AND JobIHeadCreDate > "03/11/2022" AND kEstIVersion = "1" 
-
 
 
 -- Staging_Defective_Case
@@ -41,11 +24,11 @@ FROM StckMovesVal
 WHERE kcoNum = "1" AND kJobCode <> NULL AND StckMoveType = "REC-FIN" AND RecLockedDate > @LowerBound 
 
 -- Staging component
-SELECT kAccCode, kCompNum, EstICmpName
+SELECT kJobCode, kCompNum, EstICmpName
 FROM EstIComponent
 WHERE kcoNum = "1" AND EstICmpName <> NULL AND kJobCode <> NULL AND RecLockedDate > @LowerBound
 
 -- Staging ProductionOrderQty
-SELECT kAccCode, kCompNo, EstICompYieldQty
+SELECT kJobCode, kCompNo, EstICompYieldQty
 FROM EstICompQty
 WHERE kcoNum = "1" AND kJobCode <> NULL AND RecLockedDate > @LowerBound
